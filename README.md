@@ -6,10 +6,10 @@ Campo|Detalle
 ------|-----------
 Nombre de Proyecto| "Nnnn"
 Número de Grupo | x
-Alumnos| Nombre_Apellido1
-|  | Nombre_Apellido2
-|  | Nombre_Apellido3
-|  | Nombre_Apellido4
+Alumnos| Agustin_DeLellis
+|  | JuanManuel_Camacho
+|  | Pedro_Martinez
+|  | Bautista_Estrada
 Curso| 6°Electrónica
 Año| 20XX
 
