@@ -1,17 +1,17 @@
-# Repositorio para Proyecto "NombrePoryecto"
+# Repositorio para Proyecto "Olmpiadas electrónica"
 Para trabajar con el grupo de proyecto
 ## Datos del grupo
 Completen con sus datos la siguiente tabla:
 Campo|Detalle
 ------|-----------
-Nombre de Proyecto| "Nnnn"
-Número de Grupo | x
+Nombre de Proyecto| "Olimpiadas Electrónica"
+Número de Grupo | Grupo1
 Alumnos| Agustin_DeLellis
 |  | JuanManuel_Camacho
 |  | Pedro_Martinez
 |  | Bautista_Estrada
 Curso| 6°Electrónica
-Año| 20XX
+Año| 2023
 
 ## Descripción del Proyecto
 Texto.
