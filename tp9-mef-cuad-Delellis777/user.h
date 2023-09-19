@@ -19,47 +19,40 @@
 /* TODO: Los parámetros de user.c pueden ponerse aquí */
     
 //Teclas
-#define	TRIS_TEC1       TRISBbits.TRISB0
-#define	PIN_TEC1        PORTBbits.RB0
-#define	TRIS_TEC2       TRISBbits.TRISB1
-#define	PIN_TEC2        PORTBbits.RB1
-#define	TRIS_TEC3       TRISBbits.TRISB2
-#define	PIN_TEC3        PORTBbits.RB2
-#define	TRIS_TEC4       TRISBbits.TRISB3
-#define	PIN_TEC4        PORTBbits.RB3
+#define	TRIS_FUSIBLE        TRISAbits.TRISA0
+#define	PIN_FUSIBLE         PORTAbits.RA0
+#define	TRIS_TRAFO          TRISAbits.TRISA1
+#define	PIN_TRAFO           PORTAbits.RA1
+#define	TRIS_TENSION_ALIM   TRISAbits.TRISA2
+#define	PIN_TENSION_ALIM    PORTAbits.RA2
+#define	TRIS_CI             TRISAbits.TRISA3
+#define	PIN_CI              PORTAbits.RA3
+#define	TRIS_CI2            TRISAbits.TRISA4
+#define	PIN_CI2             PORTAbits.RA4
+#define	TRIS_TENSION_REG    TRISAbits.TRISA5
+#define	PIN_TENSION_REG     PORTAbits.RA5
+
+
 
 //Leds
-#define	TRIS_LED1       TRISEbits.TRISE2
-#define	PIN_LED1        PORTEbits.RE2
-#define	TRIS_LED2       TRISEbits.TRISE1
-#define	PIN_LED2        PORTEbits.RE1
-#define	TRIS_LED3       TRISEbits.TRISE0
-#define	PIN_LED3        PORTEbits.RE0
-#define	TRIS_LED4       TRISAbits.TRISA5
-#define	PIN_LED4        PORTAbits.RA5
-
-//Alias de los Leds
-#define	TRIS_LED_R      TRIS_LED1 
-#define	PIN_LED_R       PIN_LED1
-#define	TRIS_LED_AM     TRIS_LED2
-#define	PIN_LED_AM      PIN_LED2 
-#define	TRIS_LED_V      TRIS_LED3
-#define PIN_LED_V       PIN_LED3 
-#define	TRIS_LED_AZ     TRIS_LED4       
-#define	PIN_LED_AZ      PIN_LED4
+#define	TRIS_FUSIBLE_AB             TRISCbits.TRISC0
+#define	PIN_FUSIBLE_AB              PORTCbits.RC0
+#define	TRIS_FALLA_TRAFO            TRISCbits.TRISC1
+#define	PIN_FALLA_TRAFO             PORTCbits.RC1
+#define	TRIS_FALLA_CI               TRISCbits.TRISC2
+#define	PIN_FALLA_CI                PORTCbits.RC2
+#define	TRIS_TENSION_GEN            TRISCbits.TRISC3
+#define	PIN_TENSION_GEN             PORTCbits.RC3
+#define	TRIS_TENSION_REG_INT        TRISCbits.TRISC4
+#define	PIN_TENSION_REG_INT         PORTCbits.RC4 
+#define	TRIS_BOTON                  TRISCbits.TRISC5
+#define	PIN_BOTON                   PORTCbits.RC5
 
 //Buzzer
-#define	TRIS_SOUNDER    TRISCbits.TRISC0
-#define	PIN_SOUNDER     PORTCbits.RC0
+#define	TRIS_BUZZER    TRISCbits.TRISC6
+#define	PIN_BUZZER     PORTCbits.RC6
 
-//Definición de notas
-#define LA_4        1136
-//...
-#define Silencio    0
 
-//Definición de Figuras
-#define Semifusa    50
-//...
 
 /*==================[tipos de datos declarados por el usuario]===============*/
 

@@ -46,19 +46,21 @@ void appInit(void) {
     /* Configura funciones analógicas y dirección de los Ports de I/O */
     ANSEL = 0;
     ANSELH = 0;
-    TRIS_TEC1 = 1;
-    TRIS_TEC2 = 1;
-    TRIS_TEC3 = 1;
-    TRIS_TEC4 = 1;  
-
-    TRIS_LED_R = 0;
-    TRIS_LED_AM = 0;
-    TRIS_LED_V = 0;
-    TRIS_LED_AZ = 0;
+    TRIS_FUSIBLE = 1;
+    TRIS_TRAFO = 1;
+    TRIS_TENSION_ALIM = 1;
+    TRIS_CI = 1; 
+    TRIS_CI2 = 1;
+    TRIS_TENSION_REG = 1;
     
-    tickInit();
-    uartInit();
-    displaytInit();
+    TRIS_FUSIBLE_AB = 0;
+    TRIS_FALLA_TRAFO = 0;
+    TRIS_FALLA_CI = 0;
+    TRIS_TENSION_GEN = 0;
+    TRIS_TENSION_INTEGRADO = 0;
+    TRIS_BOTON = 0;
+    
+   
     __delay_ms(100); //Espera que se estabilice la fuente
     
     /* TODO: Habilita Interrupciones si es necesario*/
