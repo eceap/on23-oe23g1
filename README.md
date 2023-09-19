@@ -5,11 +5,11 @@ Completen con sus datos la siguiente tabla:
 Campo|Detalle
 ------|-----------
 Nombre de Proyecto| "Olimpiadas Electrónica"
-Número de Grupo | Grupo1
-Alumnos| Agustin_DeLellis
-|  | JuanManuel_Camacho
-|  | Pedro_Martinez
-|  | Bautista_Estrada
+Número de Grupo | Grupo 1
+Alumnos| Agustin DeLellis
+|  | Juan Manuel Camacho
+|  | Pedro Martinez
+|  | Bautista Estrada
 Curso| 6°Electrónica
 Año| 2023
 
