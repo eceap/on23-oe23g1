@@ -59,18 +59,18 @@ void ActualizarMEF(void) {
     switch (estadoActual) {
         case E_BuscandoError:
             if (PIN_FUSIBLE == 0)
-                estadoActual = E_FallaFusible;
+                estadoActual = E_FallaFusible;//listo//
             if (PIN_TENSION_ALIM == 0)
-                estadoActual = E_TensionAlimGen;
+                estadoActual = E_TensionAlimGen;//listo//
             if (PIN_TENSION_REG == 0)
-                estadoActual = E_Tension_RegInt;
+                estadoActual = E_Tension_RegInt;////
             if (PIN_CI = 0 && PIN_CI2 = 0)
                 estadoActual = E_FallaCI;
             if (PIN_CI = 1 && PIN_CI2 = 1)
                 estadoActual = E_FallaCI;
             if (PIN_TRAFO == 0)
                 estadoActual = E_FallaTrafo;
-
+            break;
 
 
         case E_FallaFusible:
@@ -80,18 +80,40 @@ void ActualizarMEF(void) {
             }
             if (PIN_FUSIBLE == 1)
                 estadoActual = E_BuscandoError;
-
+            break;
         case E_FallaTrafo:
             if (PIN_TRAFO == 0) {
                 PIN_LED_FALLA_TRAFO = 1;
                 estadoActual = E_Buzzer;
             }
+            break;
+        case E_Tension_RegInt:   
+            if(PIN_TENSION_REG == 0){
+                PIN_LED_TENSION_REG_INT = 0;
+                estadoActual = E_Buzzer;
+            }
+            break;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         case E_Buzzer:
             PIN_BUZZER = 1;
             if (PIN_BOTON == 0)
                 PIN_BUZZER = 0;
-
+            break;
     }
 }
 
