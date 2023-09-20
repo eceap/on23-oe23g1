@@ -70,34 +70,53 @@ void ActualizarMEF(void) {
                 estadoActual = E_FallaCI;
             if (PIN_TRAFO == 0)
                 estadoActual = E_FallaTrafo;
+            if(PIN_FUSIBLE == 0 && PIN_TENSION_ALIM == 0 && PIN_TENSION_REG == 0
+                PIN_CI == 0 && PIN_CI2 == 0 && PIN_TRAFO == 0)
+                estadoActual = E_FallaGeneral;
+            
             break;
 
 
+        
         case E_FallaFusible:
-            if (PIN_FUSIBLE == 0) {
                 PIN_LED_FUSIBLE_AB = 1;
                 estadoActual = E_Buzzer;
-            }
             if (PIN_FUSIBLE == 1)
                 estadoActual = E_BuscandoError;
             break;
+        
         case E_FallaTrafo:
-            if (PIN_TRAFO == 0) {
                 PIN_LED_FALLA_TRAFO = 1;
                 estadoActual = E_Buzzer;
-            }
+            if (PIN_TRAFO == 1)
+                estadoActual = E_BuscandoError;
             break;
+        
         case E_Tension_RegInt:   
-            if(PIN_TENSION_REG == 0){
-                PIN_LED_TENSION_REG_INT = 0;
+                PIN_LED_TENSION_REG_INT = 1;
                 estadoActual = E_Buzzer;
-            }
+ 
+            if (PIN_TENSION_REG == 1)
+                estadoActual = E_BuscandoError;
             break;
         
-        
-        
-        
-        
+        case E_FallaCI:   
+                PIN_LED_FALLA_CI = 1;
+                estadoActual = E_Buzzer;
+            if (PIN_TENSION_REG == 1)
+                estadoActual = E_BuscandoError;
+            break;
+            
+        case E_TensionAlimGen:
+            PIN_LED_TENSION_GEN = 1;
+            estadoActual = E_Buzzer;
+           if(PIN_TENSION_ALIM = 1)
+               estadoActual = E_BuscandoError;
+            break;
+            
+        case E_FallaGeneral:
+            PIN_LED_FUN_GENERAL = 1;
+            estadoActual = E_Buzzer;
         
         
         
