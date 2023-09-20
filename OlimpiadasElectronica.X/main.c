@@ -48,6 +48,7 @@ void main(void) {
         PIN_LED_FALLA_CI = 0;
         PIN_LED_TENSION_GEN = 0;
         PIN_LED_TENSION_REG_INT = 0;
+        PIN_LED_FUN_GENERAL = 1;
         PIN_BOTON = 0;
         PIN_BUZZER = 0;
     }
@@ -80,12 +81,14 @@ void ActualizarMEF(void) {
         
         case E_FallaFusible:
                 PIN_LED_FUSIBLE_AB = 1;
+                PIN_LED_FUN_GENERAL = 0;
                 estadoActual = E_Buzzer;
-            if (PIN_FUSIBLE == 1)
+                if (PIN_FUSIBLE == 1)
                 estadoActual = E_BuscandoError;
             break;
         
         case E_FallaTrafo:
+                PIN_LED_FUN_GENERAL = 0;    
                 PIN_LED_FALLA_TRAFO = 1;
                 estadoActual = E_Buzzer;
             if (PIN_TRAFO == 1)
@@ -93,6 +96,7 @@ void ActualizarMEF(void) {
             break;
         
         case E_Tension_RegInt:   
+                PIN_LED_FUN_GENERAL = 0;
                 PIN_LED_TENSION_REG_INT = 1;
                 estadoActual = E_Buzzer;
  
@@ -102,6 +106,7 @@ void ActualizarMEF(void) {
         
         case E_FallaCI:   
                 PIN_LED_FALLA_CI = 1;
+                PIN_LED_FUN_GENERAL = 0;
                 estadoActual = E_Buzzer;
             if (PIN_TENSION_REG == 1)
                 estadoActual = E_BuscandoError;
@@ -109,16 +114,16 @@ void ActualizarMEF(void) {
             
         case E_TensionAlimGen:
             PIN_LED_TENSION_GEN = 1;
+            PIN_LED_FUN_GENERAL = 0;
             estadoActual = E_Buzzer;
            if(PIN_TENSION_ALIM = 1)
                estadoActual = E_BuscandoError;
             break;
             
         case E_FallaGeneral:
-            PIN_LED_FUN_GENERAL = 1;
+            PIN_LED_FUN_GENERAL = 0;
             estadoActual = E_Buzzer;
-        
-        
+            break;
         
         
         
