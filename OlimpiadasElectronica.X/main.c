@@ -23,8 +23,8 @@
 
 typedef enum {
     E_BuscandoError, E_FallaFusible, E_FallaTrafo, E_FallaCI,
-    E_Tension_RegInt, E_TensionAlimGen, E_FallaGeneral, E_Inicial, E_Buzzer
-} estadoMEF_t;
+    E_Tension_RegInt, E_TensionAlimGen, E_FallaGeneral, E_Inicial, E_Buzzer,
+E_EsperandoReset} estadoMEF_t;
 /*==================[definiciones de datos internos]=========================*/
 estadoMEF_t estadoActual; // Variable de estado (global)
 tick_t tInicio;
@@ -58,13 +58,13 @@ void main(void) {
 /*==================[definiciones de funciones internas]=====================*/
 void ActualizarMEF(void) {
     switch (estadoActual) {
-        case E_BuscandoError:
+        case E_BuscandoError://en este estado se busca el error 
             if (PIN_FUSIBLE == 0)
-                estadoActual = E_FallaFusible;//listo//
+                estadoActual = E_FallaFusible;
             if (PIN_TENSION_ALIM == 0)
-                estadoActual = E_TensionAlimGen;//listo//
+                estadoActual = E_TensionAlimGen;
             if (PIN_TENSION_REG == 0)
-                estadoActual = E_Tension_RegInt;////
+                estadoActual = E_Tension_RegInt;
             if (PIN_CI = 0 && PIN_CI2 = 0)
                 estadoActual = E_FallaCI;
             if (PIN_CI = 1 && PIN_CI2 = 1)
@@ -72,13 +72,13 @@ void ActualizarMEF(void) {
             if (PIN_TRAFO == 0)
                 estadoActual = E_FallaTrafo;
             if(PIN_FUSIBLE == 0 && PIN_TENSION_ALIM == 0 && PIN_TENSION_REG == 0
-                PIN_CI == 0 && PIN_CI2 == 0 && PIN_TRAFO == 0)
+                PIN_CI == 0 && PIN_CI2 == 0 && PIN_TRAFO == 0){
                 estadoActual = E_FallaGeneral;
-            
+            }
             break;
 
 
-        
+    // en esta parte se activa dependiendo de la falla el led correspondiente
         case E_FallaFusible:
                 PIN_LED_FUSIBLE_AB = 1;
                 PIN_LED_FUN_GENERAL = 0;
@@ -132,12 +132,16 @@ void ActualizarMEF(void) {
         
         
         
-        
+        //estado por separado para el buzzer 
         case E_Buzzer:
             PIN_BUZZER = 1;
-            if (PIN_BOTON == 0)
-                PIN_BUZZER = 0;
+            estadoActual = E_EsperandoReset;
             break;
+        //se debe de resetear el pic para reiniciar la deteccion de errores
+        case E_EsperandoReset:
+            PIN_BUZZER = 0;
+            break;    
+    
     }
 }
 
