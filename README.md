@@ -6,7 +6,7 @@ Campo|Detalle
 ------|-----------
 Nombre de Proyecto| "Olimpiadas Electrónica"
 Número de Grupo | Grupo 1
-Alumnos| Agustin DeLellis
+Alumnos| Agustin De Lellis
 |  | Juan Manuel Camacho
 |  | Pedro Martinez
 |  | Bautista Estrada
