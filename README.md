@@ -14,14 +14,6 @@ Curso| 6°Electrónica
 Año| 2023
 
 ## Descripción del Proyecto
-Texto.
+Este programa detecta la falla y enciende un su correspondiente led y un buzzer
 
-## Partes del Proyecto
 
-## 1. Parte 1
-- [ ] Tarea 1
-- [ ] Tarea 2
-  - [ ] Subtarea
-
-## 2. Parte2
-Texto.
