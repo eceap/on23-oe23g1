@@ -61,17 +61,17 @@ void ActualizarMEF(void) {
             // en este estado se busca el error 
             if (PIN_FUSIBLE == 0)
                 estadoActual = E_FallaFusible;
-            if (PIN_TENSION_ALIM == 0)
+           else if (PIN_TENSION_ALIM == 0)
                 estadoActual = E_TensionAlimGen;
-            if (PIN_TENSION_REG == 0)
+            else if (PIN_TENSION_REG == 0)
                 estadoActual = E_Tension_RegInt;
-            if (PIN_CI == 0 && PIN_CI2 == 0)
+            else if (PIN_CI == 0 && PIN_CI2 == 0)
                 estadoActual = E_FallaCI;
-            if (PIN_CI == 1 && PIN_CI2 == 1)
+            else if (PIN_CI == 1 && PIN_CI2 == 1)
                 estadoActual = E_FallaCI;
-            if (PIN_TRAFO == 0)
+            else if (PIN_TRAFO == 0)
                 estadoActual = E_FallaTrafo;
-            if (PIN_FUSIBLE == 0 && PIN_TENSION_ALIM == 0 && PIN_TENSION_REG == 0 &&
+            else if (PIN_FUSIBLE == 0 && PIN_TENSION_ALIM == 0 && PIN_TENSION_REG == 0 &&
                 PIN_CI == 0 && PIN_CI2 == 0 && PIN_TRAFO == 0) {
                 estadoActual = E_FallaGeneral;
             }
