@@ -11,9 +11,10 @@ Alumnos| Agustin De Lellis
 |  | Pedro Martinez
 |  | Bautista Estrada
 Curso| 6°Electrónica
+Colegio| ECEA
 Año| 2023
 
 ## Descripción del Proyecto
-Este programa detecta la falla y enciende un su correspondiente led y un buzzer
+Este es un codigo ultilizado para la deteccion de errores en lenguaje C, detecta cada vez que hay un error en el circuito e informa el tal de falla mediante encendidos y apagados de Leds y sonidos emitidos por un Buzzer.
 
 
