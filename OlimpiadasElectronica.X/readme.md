@@ -7,13 +7,14 @@ Nombre|Descripción
 
 Manual del PIC [PIC16F882/883/884/886/887 Data Sheet](https://ww1.microchip.com/downloads/en/DeviceDoc/40001291H.pdf)
 
-## Datos del alumno :nerd_face:
-Completa con tus datos la siguiente tabla:
+## Datos del alumno :
+Completa con los datos la siguiente tabla:
 
 Campo|Detalle
 ------|-----------
 Alumnos| Camacho, Martinez, De Lellis, Estrada
 Curso| 6°Electrónica
+Colegio| ECEA 
 Año| 2023
 
 Este es un codigo ultilizado para la deteccion de errores en lenguaje C, detecta cada vez que hay un error en el circuito e informa
